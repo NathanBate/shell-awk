@@ -74,3 +74,17 @@ contains the first command example from above.
 ```
 awk -f print-full-list.awk dataset.txt
 ```
+
+Filter for a Specific name
+
+```
+awk -F, -v name="Hank Kim" '$2 == name' dataset.txt
+```
+
+Return the row if $2 contains the name and it does not have to be an exact match
+
+```
+awk -F, -v name="Hank" 'index($2, name)' dataset.txt
+```
+
+
