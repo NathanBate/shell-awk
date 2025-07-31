@@ -92,7 +92,12 @@ awk -F, -v name="Hank" 'index($2, name)' dataset.txt
 Dump all the variables for a given awk command. Add the `--dump-variables` param.
 
 ```
-awk -F, -v name="Hank" --dump-variables 'index($2, name)' dataset.txt
+awk \
+ -F, \
+-v name="Hank" \
+--dump-variables \
+'index($2, name)' \
+dataset.txt
 ```
 
 This will output:
