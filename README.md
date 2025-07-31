@@ -89,4 +89,45 @@ Return the row if $2 contains the name and it does not have to be an exact match
 awk -F, -v name="Hank" 'index($2, name)' dataset.txt
 ```
 
+Dump all the variables for a given awk command. Add the `--dump-variables` param.
+
+```
+awk -F, -v name="Hank" --dump-variables 'index($2, name)' dataset.txt
+```
+
+This will output:
+
+```
+ARGC: 2
+ARGIND: 1
+ARGV: array, 2 elements
+BINMODE: 0
+CONVFMT: "%.6g"
+ENVIRON: array, 27 elements
+ERRNO: ""
+FIELDWIDTHS: ""
+FILENAME: "dataset.txt"
+FNR: 11
+FPAT: "[^[:space:]]+"
+FS: ","
+FUNCTAB: array, 42 elements
+IGNORECASE: 0
+LINT: 0
+NF: 5
+NR: 11
+OFMT: "%.6g"
+OFS: " "
+ORS: "\n"
+PREC: 53
+PROCINFO: array, 27 elements
+RLENGTH: 0
+ROUNDMODE: "N"
+RS: "\n"
+RSTART: 0
+RT: "\n"
+SUBSEP: "\034"
+SYMTAB: array, 29 elements
+TEXTDOMAIN: "messages"
+name: "Hank"
+```
 
