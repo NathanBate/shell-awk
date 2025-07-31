@@ -34,7 +34,11 @@ ID,Name,Department,Salary,HireDate
 Print out dataset with a page header
 
 ```
-awk 'BEGIN{printf "Checkout my sample dataset\n----------------------------\n"}{print}' dataset.txt
+awk '
+BEGIN {printf "\n\nCheckout my sample dataset\n----------------------------\n"}
+{print}
+END {printf "-------------------------------\nFooter Text\n\n"}' \ 
+dataset.txt
 ```
 
 Print out just column 2 (names column) and skip the header row
