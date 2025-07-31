@@ -67,3 +67,10 @@ NR > 1 {print $2; count++}
 END {print "Total Names: ", count, "\n"}
 ' dataset.txt
 ```
+
+Use a awk command file. The `print-full-list.awk` is in the repo and just
+contains the first command example from above.
+
+```
+awk -f print-full-list.awk dataset.txt
+```
