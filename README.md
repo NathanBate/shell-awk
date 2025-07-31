@@ -57,3 +57,13 @@ Print out just column 2 (names column) and skip the header row
 ```
 awk -F, 'NR > 1 {print $2}' dataset.txt
 ```
+
+Add a total number of rows
+
+```
+awk -F, '
+BEGIN {printf "\n"}
+NR > 1 {print $2; count++}
+END {print "Total Names: ", count, "\n"}
+' dataset.txt
+```
