@@ -35,9 +35,16 @@ Print out dataset with a page header
 
 ```
 awk '
-BEGIN {printf "\n\nCheckout my sample dataset\n----------------------------\n"}
+BEGIN {
+	printf "\n\n"
+	printf "Checkout my sample dataset\n"
+	printf "----------------------------\n"
+}
 {print}
-END {printf "-------------------------------\nFooter Text\n\n"}' \ 
+END {
+	printf "-------------------------------\n"
+	printf "Footer Text\n\n"
+}' \ 
 dataset.txt
 ```
 
