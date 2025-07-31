@@ -31,6 +31,18 @@ ID,Name,Department,Salary,HireDate
 
 ## Commands
 
+Print out dataset with a page header
+
 ```
 awk 'BEGIN{printf "Checkout my sample dataset\n----------------------------\n"}{print}' dataset.txt
+```
+
+Print out just column 2 (names column) and skip the header row
+
+- `-F,` specifies the comma delimeter
+- `NR > 1` skips the header line
+- `$2` is the column number which corresponds to the "Name" column
+
+```
+awk -F, 'NR > 1 {print $2}' dataset.txt
 ```
