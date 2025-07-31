@@ -83,6 +83,8 @@ awk -F, -v name="Hank Kim" '$2 == name' dataset.txt
 
 Return the row if $2 contains the name and it does not have to be an exact match
 
+- `index` is like the indexOf function where if name exists within $2 it will return the index of where it is in the string.
+
 ```
 awk -F, -v name="Hank" 'index($2, name)' dataset.txt
 ```
