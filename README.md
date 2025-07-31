@@ -10,4 +10,4 @@
 > specially designed for text processing. Its name is derived from the family 
 > names of its authors − Alfred Aho, Peter Weinberger, and Brian Kernighan.
 
-[Tutorials Point[(https://www.tutorialspoint.com/awk/awk_overview.htm)
+[Tutorials Point](https://www.tutorialspoint.com/awk/awk_overview.htm)
